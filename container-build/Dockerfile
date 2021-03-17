@@ -1,7 +1,7 @@
 # Use the httpd-parent image as base
 FROM quay.io/redhattraining/httpd-parent
 
-LABEL io.openshift.expose-services="8080:http" && io.openshift.tags="apache, httpd" && io.k8s.description="Apache" && io.k8s.display-name="Apache"
+LABEL io.openshift.expose-services="8080:http" io.openshift.tags="apache, httpd" io.k8s.description="Apache" io.k8s.display-name="Apache"
 
 RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 
